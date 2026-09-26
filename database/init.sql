@@ -58,3 +58,13 @@ CREATE TABLE IF NOT EXISTS audit_log (
   target_id TEXT,
   created_at TEXT
 );
+
+CREATE TABLE IF NOT EXISTS work_order_closeout (
+  id INTEGER PRIMARY KEY,
+  work_order_id TEXT,
+  outcome TEXT,
+  attempt_no INTEGER,
+  batches_summary TEXT,
+  created_at TEXT,
+  released BOOLEAN DEFAULT FALSE
+);
